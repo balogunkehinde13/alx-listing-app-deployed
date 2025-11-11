@@ -13,11 +13,11 @@ export default function BookingForm() {
     cvv: "",
     billingAddress: "",
   });
-
+//
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null as string | null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setLoading(true);
     setError(null);

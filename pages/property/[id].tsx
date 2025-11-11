@@ -8,7 +8,7 @@ export default function PropertyDetailPage() {
   const { id } = router.query;
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
-
+//1930
   useEffect(() => {
     const fetchProperty = async () => {
       if (!id) return;

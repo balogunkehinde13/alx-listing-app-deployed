@@ -14,6 +14,7 @@ export interface ButtonProps {
 }
 
 export interface PropertyProps {
+  id: string;
   name: string;
     address: {
       state: string;
@@ -31,3 +32,27 @@ export interface PropertyProps {
     image: string;
     discount: string;
   }
+
+export interface PropertyAddress {
+  streetAddress: string;
+  zipcode: string;
+  city: string;
+  state: string;
+  neighborhood?: string | null;
+}
+
+export interface Property {
+  Area: number;
+  Bathrooms: number;
+  Bedrooms: number;
+  Price: number;
+  PropertyAddress: PropertyAddress;
+  PropertyZPID: number;
+  PropertyZillowURL: string;
+  Source: string;
+  daysOnZillow: number;
+  favoriteCount: number;
+  pageViewCount: number;
+  yearBuilt: number;
+  zestimate: number;
+}
