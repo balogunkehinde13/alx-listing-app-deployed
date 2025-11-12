@@ -1,9 +1,19 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ReviewSection = ({ propertyId }) => {
-  const [reviews, setReviews] = useState([]);
+// Define a type for props
+interface ReviewSectionProps {
+  propertyId: string; // or number, depending on your data
+}
+
+interface Review {
+  id: string | number;
+  comment: string;
+  // add more fields if your API returns them
+}
+
+const ReviewSection: React.FC<ReviewSectionProps> = ({ propertyId }) => {
+  const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
