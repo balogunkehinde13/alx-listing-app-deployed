@@ -21,9 +21,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   }
 
   const address = property.PropertyAddress || {};
-  const imageSrc =
-    property.image ||
-    (typeof apartmentImg === "string" ? apartmentImg : apartmentImg.src);
+
 
   return (
     <Link href={`/property/${property.PropertyZPID}`} className="block">
@@ -31,7 +29,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         {/* Property Image */}
         <div className="relative w-full h-48">
           <Image
-            src={imageSrc}
+            src={apartmentImg}
             alt={`${address.streetAddress || "Property"} image`}
             width={400}
             height={300}
