@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Star } from "lucide-react";
-import { PropertyProps } from "@/interfaces";
+import { Property } from "@/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 import apartmentImg from "@/public/assets/apartment.jpeg";
 
 interface PropertyCardProps {
-  property: PropertyProps;
+  property: Property;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
