@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const ReviewSection = ({ propertyId }: string) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ReviewSection = ({ propertyId }) => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
